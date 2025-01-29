@@ -4,6 +4,7 @@ from babel.dates import format_date
 import sys
 import shutil
 import os
+import random
 
 def hapus_layar():
     # penghapus layar
@@ -63,46 +64,74 @@ def buat_data_file():
             pass
         print(f"File {file_name} berhasil dibuat.")
     except FileExistsError:
-        print("Data file siap di muat !")
-        
-def edit_data_file(pertanyaan,jawaban):
+        print(" Data file siap di muat !")     
+
+def hitung_data():
+    # menghitug data yang di simpan 
+    file_name = "data.txt"
+    try:
+        with open(file_name, "r") as file:
+            data = file.readlines()
+            jumlah_data = len(data)
+            print(f" >>.Jumlah data yang disimpan di data bas: {jumlah_data}")
+    except FileNotFoundError:
+        print(f"File {file_name} tidak ditemukan.")
+    except Exception as e:
+        print(f"Kesalahan: {e}")
+
+def edit_data_file(pertanyaan, jawaban):
     # fungsi Menambah isi file
     file_name = "data.txt"
-    with open(file_name, "a") as file:
-        file.write(f"{pertanyaan}:{jawaban}\n")
+    try:
+        with open(file_name, "a") as file:
+            file.write(f"{pertanyaan}:{jawaban}\n")
         print("data di simpan !")
+    except FileNotFoundError:
+        print(f"File {file_name} tidak ditemukan.")
+    except PermissionError:
+        print(f"Anda tidak memiliki izin untuk menulis file {file_name}.")
+    except Exception as e:
+        print(f"Kesalahan: {e}")
 
 def cari_jawaban(pertanyaan):
     try:
         with open("data.txt", "r") as file:
+            jawaban_list = []
             for line in file:
                 line = line.strip()
                 if ":" in line:
                     p, j = line.split(":")
                     if p.lower() == pertanyaan.lower():
-                        return j.strip()
+                        jawaban_list = [x.strip() for x in j.split(" | ")]
+            if jawaban_list:
+                return random.choice(jawaban_list)
+            else:
+                return "Maaf, saya tidak tahu jawaban untuk pertanyaan tersebut."
     except FileNotFoundError:
         print("File data.txt tidak ditemukan.")
+        return None
     except Exception as e:
         print(f"Kesalahan: {e}")
-    return None
+        return None
    
 def main ():
-	loading_proses(" >>.mennyalakan program !",)
-	nama = input(" siyapa nama anda? ")
+	loading_proses(" >>.men nyalakan program !",)
+	nama = input(" >>.Masukkan nama anda? ")
 	buat_data_file()
-	loading_proses(">>.Memuat data: ")
-	print("MULAI:")
+	hitung_data()
+	loading_proses(" >>.Memuat data: ")
+	print(" >>.semua data sudah siayap:")
 	time.sleep(2)
 	hapus_layar()
 	logo()
 	print(salam_waktu(),nama)
-	print("ada yang bisa saya bantu ?")
+	print(" ada yang bisa saya bantu ?")
 	while True:
 		pertanyaan = input(nama+': ').lower()
 		if pertanyaan == "hari apa ini":
 			print(tanggal_hariini())
-		elif pertanyaan == "selesai":
+		elif pertanyaan == "exit":
+			print ("chatboot: ",cari_jawaban("exit"))
 			exit()
 		else :
 			jawaban=cari_jawaban(pertanyaan)
