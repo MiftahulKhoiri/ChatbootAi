@@ -5,6 +5,9 @@ import sys
 import shutil
 import os
 import random
+import subprocess
+
+modul_yang_dibutuhkan = ["time","datetime","babel","sys","shutil","os","random","subprocess"]
 
 def hapus_layar():
     # penghapus layar
@@ -12,6 +15,18 @@ def hapus_layar():
         os.system("cls")
     else:  # macOS dan Linux
         os.system("clear")
+
+def cek_install_modul():
+    for modul in modul_yang_dibutuhkan:
+        try:
+            __import__(modul)
+            print(f" >>.Modul {modul} sudah terinstal.")
+            time.sleep(2)
+        except ImportError:
+            print(f" >>.Modul {modul} belum terinstal. Menginstal...")
+            subprocess.check_call([sys.executable, "-m", "pip", "install", modul])
+            print(f" >>.Modul {modul} berhasil diinstal.")
+    print(" >>.Semua modul telah diinstal.")
 
 def logo():
     # fungsi logo
@@ -64,7 +79,7 @@ def buat_data_file():
             pass
         print(f"File {file_name} berhasil dibuat.")
     except FileExistsError:
-        print(" Data file siap di muat !")     
+        print(" >>.Data file sudah siap")     
 
 def hitung_data():
     # menghitug data yang di simpan 
@@ -116,9 +131,11 @@ def cari_jawaban(pertanyaan):
    
 def main ():
 	loading_proses(" >>.men nyalakan program !",)
-	nama = input(" >>.Masukkan nama anda? ")
+	print(">>.memuat modull yang di butuhkan")
+	cek_install_modul()
 	buat_data_file()
 	hitung_data()
+	nama = input(" >>.Masukkan nama anda? ")
 	loading_proses(" >>.Memuat data: ")
 	print(" >>.semua data sudah siayap:")
 	time.sleep(2)
@@ -131,7 +148,7 @@ def main ():
 		if pertanyaan == "hari apa ini":
 			print(tanggal_hariini())
 		elif pertanyaan == "exit":
-			print ("chatboot: ",cari_jawaban("exit"))
+			print (f"chatboot: terimakasih {nama}",cari_jawaban("exit"))
 			exit()
 		else :
 			jawaban=cari_jawaban(pertanyaan)
