@@ -9,6 +9,8 @@ import subprocess
 
 modul_yang_dibutuhkan = ["time","datetime","babel","sys","shutil","os","random","subprocess"]
 
+data_nama = []
+
 def hapus_layar():
     # penghapus layar
     if os.name == "nt":  # Windows
@@ -21,7 +23,7 @@ def cek_install_modul():
         try:
             __import__(modul)
             print(f" >>.Modul {modul} sudah terinstal.")
-            time.sleep(2)
+            time.sleep(1)
         except ImportError:
             print(f" >>.Modul {modul} belum terinstal. Menginstal...")
             subprocess.check_call([sys.executable, "-m", "pip", "install", modul])
@@ -50,7 +52,7 @@ def loading_proses(teks, waktu=10):
         proses = i * 10
         sys.stdout.write("\r >>.Proses: [{}{}] {}%".format("#" * (proses // 10), "-" * (10 - proses // 10), proses))
         sys.stdout.flush()
-        time.sleep(1)
+        time.sleep(0.05)
     print("\n")
     
 def salam_waktu():
@@ -121,7 +123,7 @@ def cari_jawaban(pertanyaan):
             if jawaban_list:
                 return random.choice(jawaban_list)
             else:
-                print("chatboot: Maaf, saya tidak tahu jawaban untuk pertanyaan tersebut.tllong ajari saya!")
+                print(f"chatboot: Maaf, {data_nama}saya tidak tahu jawaban untuk pertanyaan tersebut.tllong ajari saya!")
                 jawaban_baru = input("jawaban: ")
                 if jawaban_baru.strip() !="":
                 	edit_data_file(pertanyaan,jawaban_baru)
@@ -144,19 +146,20 @@ def main():
         buat_data_file()
         hitung_data()
         nama = input(" >>.Masukkan nama anda? ")
+        data_nama.append(nama)
         loading_proses(" >>.Memuat data: ")
         print(" >>.semua data sudah siap:")
         time.sleep(2)
         hapus_layar()
         logo()
-        print(salam_waktu(), nama)
+        print(salam_waktu(), data_nama)
         print(" ada yang bisa saya bantu ?")
         while True:
             pertanyaan = input(nama + ': ').lower()
             if pertanyaan == "hari apa ini":
                 print(tanggal_hariini())
             elif pertanyaan == "exit":
-                print(f"chatboot: terimakasih {nama}", cari_jawaban("exit"))
+                print(f"chatboot: terimakasih {data_nama}", cari_jawaban("exit"))
                 exit()
             elif pertanyaan == "hapus":
             	hapus_layar()
