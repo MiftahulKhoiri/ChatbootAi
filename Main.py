@@ -112,22 +112,29 @@ def cari_jawaban(pertanyaan):
     try:
         with open("data.txt", "r") as file:
             jawaban_list = []
-            for line in file:
-                line = line.strip()
+            for line in file.readlines():
+                line = line.strip().lower()
                 if ":" in line:
                     p, j = line.split(":")
-                    if p.lower() == pertanyaan.lower():
+                    if p == pertanyaan.lower():
                         jawaban_list = [x.strip() for x in j.split(" | ")]
             if jawaban_list:
                 return random.choice(jawaban_list)
             else:
-                return "Maaf, saya tidak tahu jawaban untuk pertanyaan tersebut."
+                print("chatboot: Maaf, saya tidak tahu jawaban untuk pertanyaan tersebut.tllong ajari saya!")
+                jawaban_baru = input("jawaban: ")
+                if jawaban_baru.strip() !="":
+                	edit_data_file(pertanyaan,jawaban_baru)
+                	return jawaban_baru
+                else:
+            	   	print("jawaban tidak boleh kosong")           
     except FileNotFoundError:
         print("File data.txt tidak ditemukan.")
         return None
     except Exception as e:
         print(f"Kesalahan: {e}")
         return None
+
    
 def main():
     try:
@@ -151,17 +158,13 @@ def main():
             elif pertanyaan == "exit":
                 print(f"chatboot: terimakasih {nama}", cari_jawaban("exit"))
                 exit()
+            elif pertanyaan == "hapus":
+            	hapus_layar()
             else:
                 jawaban = cari_jawaban(pertanyaan)
                 if jawaban:
                     print('chatboot:', jawaban)
-                else:
-                    print('maaf saya tidak tahu jawaban nya tolong ajari saya:')
-                    jawaban_baru = input("masukan jawaban nya: ")
-                    if jawaban_baru:
-                        edit_data_file(pertanyaan, jawaban_baru)
-                    else:
-                        print("jawaban tidak boleh kosong")
+
     except KeyboardInterrupt:
         print("\nProgram dihentikan oleh pengguna.")
     except Exception as e:
