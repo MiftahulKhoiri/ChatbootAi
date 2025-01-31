@@ -129,39 +129,43 @@ def cari_jawaban(pertanyaan):
         print(f"Kesalahan: {e}")
         return None
    
-def main ():
-	loading_proses(" >>.men nyalakan program !",)
-	print(">>.memuat modull yang di butuhkan")
-	cek_install_modul()
-	buat_data_file()
-	hitung_data()
-	nama = input(" >>.Masukkan nama anda? ")
-	loading_proses(" >>.Memuat data: ")
-	print(" >>.semua data sudah siayap:")
-	time.sleep(2)
-	hapus_layar()
-	logo()
-	print(salam_waktu(),nama)
-	print(" ada yang bisa saya bantu ?")
-	while True:
-		pertanyaan = input(nama+': ').lower()
-		if pertanyaan == "hari apa ini":
-			print(tanggal_hariini())
-		elif pertanyaan == "exit":
-			print (f"chatboot: terimakasih {nama}",cari_jawaban("exit"))
-			exit()
-		else :
-			jawaban=cari_jawaban(pertanyaan)
-			if jawaban :
-				print ('chatboot:',jawaban)
-			else:
-				print('maaf saya tidak tahu jawaban nya tolong ajari saya:')
-				jawaban_baru=input("masukan jawaban nya: ")
-				if jawaban_baru:
-					edit_data_file(pertanyaan,jawaban_baru)
-				else:
-					print("jawaban tidak boleh kosong")
-								
+def main():
+    try:
+        loading_proses(" >>.men nyalakan program !",)
+        print(">>.memuat modull yang di butuhkan")
+        cek_install_modul()
+        buat_data_file()
+        hitung_data()
+        nama = input(" >>.Masukkan nama anda? ")
+        loading_proses(" >>.Memuat data: ")
+        print(" >>.semua data sudah siap:")
+        time.sleep(2)
+        hapus_layar()
+        logo()
+        print(salam_waktu(), nama)
+        print(" ada yang bisa saya bantu ?")
+        while True:
+            pertanyaan = input(nama + ': ').lower()
+            if pertanyaan == "hari apa ini":
+                print(tanggal_hariini())
+            elif pertanyaan == "exit":
+                print(f"chatboot: terimakasih {nama}", cari_jawaban("exit"))
+                exit()
+            else:
+                jawaban = cari_jawaban(pertanyaan)
+                if jawaban:
+                    print('chatboot:', jawaban)
+                else:
+                    print('maaf saya tidak tahu jawaban nya tolong ajari saya:')
+                    jawaban_baru = input("masukan jawaban nya: ")
+                    if jawaban_baru:
+                        edit_data_file(pertanyaan, jawaban_baru)
+                    else:
+                        print("jawaban tidak boleh kosong")
+    except KeyboardInterrupt:
+        print("\nProgram dihentikan oleh pengguna.")
+    except Exception as e:
+        print(f"Kesalahan: {e}")
+
 if __name__ == "__main__":
-		main()
-		
+    main()
