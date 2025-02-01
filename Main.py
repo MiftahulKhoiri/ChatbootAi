@@ -57,17 +57,18 @@ def loading_proses(teks, waktu=10):
     print("\n")
 
 def salam_waktu():
+    # memberi salam sesuai waktu nya
     jam_sekarang = datetime.datetime.now().hour
     if 1 <= jam_sekarang <= 9:
-        return "Selamat pagi!"
+        return cari_jawaban("pagi")
     elif 10 <= jam_sekarang <= 12:
-        return "Selamat siang!"
+        return cari_jawaban("siang")
     elif 13 <= jam_sekarang <= 15:
-        return "Selamat siang!"
+        return cari_jawaban("siang")
     elif 16 <= jam_sekarang <= 18:
-        return "Selamat sore!"
+        return cari_jawaban("sore")
     else:
-        return "Selamat malam!"
+        return cari_jawaban("malam")
 
 def tanggal_hariini():
     # Menampilkan tanggal sekarang
