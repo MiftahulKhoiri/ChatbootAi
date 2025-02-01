@@ -7,18 +7,19 @@ import os
 import random
 import subprocess
 
-modul_yang_dibutuhkan = ["time","datetime","babel","sys","shutil","os","random","subprocess"]
-
-data_nama = []
+# Daftar modul yang dibutuhkan
+modul_yang_dibutuhkan = ["babel"]
+data_nama = ""
 
 def hapus_layar():
-    # penghapus layar
+    # Penghapus layar
     if os.name == "nt":  # Windows
         os.system("cls")
     else:  # macOS dan Linux
         os.system("clear")
 
 def cek_install_modul():
+    # Memeriksa dan menginstal modul yang dibutuhkan
     for modul in modul_yang_dibutuhkan:
         try:
             __import__(modul)
@@ -31,7 +32,7 @@ def cek_install_modul():
     print(" >>.Semua modul telah diinstal.")
 
 def logo():
-    # fungsi logo
+    # Fungsi logo
     lebar_terminal = shutil.get_terminal_size().columns
     spasi = " " * ((lebar_terminal - 30) // 2)
     print("\n" + spasi + """
@@ -46,15 +47,15 @@ def logo():
     print(spasi + "-------------------------------")
 
 def loading_proses(teks, waktu=10):
-    # fungsi loading
+    # Fungsi loading
     print(teks)
-    for i in range(waktu+1):
+    for i in range(waktu + 1):
         proses = i * 10
         sys.stdout.write("\r >>.Proses: [{}{}] {}%".format("#" * (proses // 10), "-" * (10 - proses // 10), proses))
         sys.stdout.flush()
-        time.sleep(0.05)
+        time.sleep(0.10)
     print("\n")
-    
+
 def salam_waktu():
     jam_sekarang = datetime.datetime.now().hour
     if 1 <= jam_sekarang <= 9:
@@ -67,42 +68,50 @@ def salam_waktu():
         return "Selamat sore!"
     else:
         return "Selamat malam!"
-        
+
 def tanggal_hariini():
-	# menampilkan tanggal sekarang
-	hari_ini=datetime.datetime.now()
-	return format_date(hari_ini,format='full',locale='id_ID')
+    # Menampilkan tanggal sekarang
+    hari_ini = datetime.datetime.now()
+    return format_date(hari_ini, format='full', locale='id_ID')
+
+def tampilkan_waktu_sekarang():
+    """
+    Mengembalikan waktu sekarang dalam format: jam:menit:detik
+    """
+    waktu_sekarang = datetime.datetime.now().time()
+    return f"Waktu saat ini: {waktu_sekarang.strftime('%H:%M:%S')}"
 
 def buat_data_file():
-    # Membuat file jika belum ada
+    # Membuat file utama jika belum ada
     file_name = "data.txt"
     try:
         with open(file_name, "x") as file:
             pass
         print(f"File {file_name} berhasil dibuat.")
     except FileExistsError:
-        print(" >>.Data file sudah siap")     
+        print(" >>.Data file sudah siap")
+        hitung_data()
 
 def hitung_data():
-    # menghitug data yang di simpan 
+    # Menghitung data yang disimpan
     file_name = "data.txt"
     try:
         with open(file_name, "r") as file:
             data = file.readlines()
             jumlah_data = len(data)
-            print(f" >>.Jumlah data yang disimpan di data bas: {jumlah_data}")
+            print(f" >>.Jumlah data yang disimpan di data base: {jumlah_data}")
     except FileNotFoundError:
         print(f"File {file_name} tidak ditemukan.")
     except Exception as e:
         print(f"Kesalahan: {e}")
 
 def edit_data_file(pertanyaan, jawaban):
-    # fungsi Menambah isi file
+    # Menambah atau mengubah isi file
     file_name = "data.txt"
     try:
         with open(file_name, "a") as file:
             file.write(f"{pertanyaan}:{jawaban}\n")
-        print("data di simpan !")
+        print("Data disimpan!")
     except FileNotFoundError:
         print(f"File {file_name} tidak ditemukan.")
     except PermissionError:
@@ -111,6 +120,7 @@ def edit_data_file(pertanyaan, jawaban):
         print(f"Kesalahan: {e}")
 
 def cari_jawaban(pertanyaan):
+    # Mencari jawaban dari data utama
     try:
         with open("data.txt", "r") as file:
             jawaban_list = []
@@ -123,13 +133,14 @@ def cari_jawaban(pertanyaan):
             if jawaban_list:
                 return random.choice(jawaban_list)
             else:
-                print(f"chatboot: Maaf, {data_nama}saya tidak tahu jawaban untuk pertanyaan tersebut.tllong ajari saya!")
-                jawaban_baru = input("jawaban: ")
-                if jawaban_baru.strip() !="":
-                	edit_data_file(pertanyaan,jawaban_baru)
-                	return jawaban_baru
-                else:
-            	   	print("jawaban tidak boleh kosong")           
+                print(f"chatboot: Maaf, {data_nama}, saya tidak tahu jawaban untuk pertanyaan tersebut. Tolong ajari saya!")
+                while True:
+                    jawaban_baru = input("jawaban: ")
+                    if jawaban_baru.strip() != "":
+                        edit_data_file(pertanyaan, jawaban_baru)
+                        return jawaban_baru
+                    else:
+                        print("Jawaban tidak boleh kosong. Silakan coba lagi.")
     except FileNotFoundError:
         print("File data.txt tidak ditemukan.")
         return None
@@ -137,32 +148,34 @@ def cari_jawaban(pertanyaan):
         print(f"Kesalahan: {e}")
         return None
 
-   
 def main():
+    # Program utama
     try:
-        loading_proses(" >>.men nyalakan program !",)
-        print(">>.memuat modull yang di butuhkan")
+        loading_proses(" >>.Menyalakan program!")
+        print(" >>.Memuat modul yang dibutuhkan")
         cek_install_modul()
         buat_data_file()
-        hitung_data()
-        nama = input(" >>.Masukkan nama anda? ")
-        data_nama.append(nama)
+        nama = input(" >>.Masukkan nama Anda: ")
+        global data_nama
+        data_nama = nama
         loading_proses(" >>.Memuat data: ")
-        print(" >>.semua data sudah siap:")
+        print(" >>.Semua data sudah siap:")
         time.sleep(2)
         hapus_layar()
         logo()
         print(salam_waktu(), data_nama)
-        print(" ada yang bisa saya bantu ?")
+        print("Ada yang bisa saya bantu?")
         while True:
             pertanyaan = input(nama + ': ').lower()
             if pertanyaan == "hari apa ini":
                 print(tanggal_hariini())
-            elif pertanyaan == "exit":
-                print(f"chatboot: terimakasih {data_nama}", cari_jawaban("exit"))
-                exit()
+            elif pertanyaan == "jam berapa sekarang":
+                print(tampilkan_waktu_sekarang())
             elif pertanyaan == "hapus":
-            	hapus_layar()
+                hapus_layar()
+            elif pertanyaan == "exit":
+                print(f"chatboot: Terima kasih {data_nama}", cari_jawaban("exit"))
+                exit()
             else:
                 jawaban = cari_jawaban(pertanyaan)
                 if jawaban:
