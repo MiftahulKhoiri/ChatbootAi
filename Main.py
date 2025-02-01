@@ -109,9 +109,31 @@ def edit_data_file(pertanyaan, jawaban):
     # Menambah atau mengubah isi file
     file_name = "data.txt"
     try:
-        with open(file_name, "a") as file:
+        # Menambahkan data baru ke file
+        with open(file_name, "a", encoding='utf-8') as file:
             file.write(f"{pertanyaan}:{jawaban}\n")
         print("Data disimpan!")
+
+        # Membaca, merapikan, dan mengurutkan file
+        with open(file_name, "r", encoding='utf-8') as file:
+            lines = file.readlines()
+
+        # Membersihkan dan merapikan setiap baris
+        cleaned_lines = []
+        for line in lines:
+            stripped_line = line.strip()
+            if stripped_line:
+                cleaned_lines.append(stripped_line)
+
+        # Mengurutkan baris berdasarkan abjad
+        sorted_lines = sorted(cleaned_lines)
+
+        # Menulis kembali ke file yang sama
+        with open(file_name, "w", encoding='utf-8') as file:
+            for line in sorted_lines:
+                file.write(line + "\n")
+
+        print("File telah dirapikan dan diurutkan berdasarkan abjad.")
     except FileNotFoundError:
         print(f"File {file_name} tidak ditemukan.")
     except PermissionError:
@@ -119,8 +141,10 @@ def edit_data_file(pertanyaan, jawaban):
     except Exception as e:
         print(f"Kesalahan: {e}")
 
+konteks = {}  # Variabel global untuk menyimpan konteks
+
 def cari_jawaban(pertanyaan):
-    # Mencari jawaban dari data utama
+    global konteks
     try:
         with open("data.txt", "r") as file:
             jawaban_list = []
@@ -128,16 +152,20 @@ def cari_jawaban(pertanyaan):
                 line = line.strip().lower()
                 if ":" in line:
                     p, j = line.split(":")
-                    if p == pertanyaan.lower():
+                    if p in pertanyaan.lower():
                         jawaban_list = [x.strip() for x in j.split(" | ")]
             if jawaban_list:
                 return random.choice(jawaban_list)
             else:
+                # Cek apakah ada konteks sebelumnya
+                if "terakhir" in pertanyaan.lower() and "terakhir" in konteks:
+                    return konteks["terakhir"]
                 print(f"chatboot: Maaf, {data_nama}, saya tidak tahu jawaban untuk pertanyaan tersebut. Tolong ajari saya!")
                 while True:
                     jawaban_baru = input("jawaban: ")
                     if jawaban_baru.strip() != "":
                         edit_data_file(pertanyaan, jawaban_baru)
+                        konteks["terakhir"] = jawaban_baru  # Simpan jawaban terakhir ke konteks
                         return jawaban_baru
                     else:
                         print("Jawaban tidak boleh kosong. Silakan coba lagi.")
@@ -147,7 +175,7 @@ def cari_jawaban(pertanyaan):
     except Exception as e:
         print(f"Kesalahan: {e}")
         return None
-
+        
 def main():
     # Program utama
     try:
