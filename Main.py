@@ -94,37 +94,39 @@ def buat_data_file():
         hitung_data()
 
 def hitung_data():
-    # Menghitung data yang disimpan
     file_name = "data.txt"
     try:
-        with open(file_name, "r") as file:
+        with open(file_name, "r", encoding='utf-8') as file:
             data = file.readlines()
-            jumlah_data = len(data)
-            print(f" >>.Jumlah data yang disimpan di data base: {jumlah_data}")
+            # Menghitung hanya baris yang tidak kosong
+            jumlah_data = sum(1 for line in data if line.strip())
+            print(f" >> Jumlah data yang disimpan di database: {jumlah_data}")
     except FileNotFoundError:
         print(f"File {file_name} tidak ditemukan.")
     except Exception as e:
         print(f"Kesalahan: {e}")
 
 def edit_data_file(pertanyaan, jawaban):
-    # Menambah atau mengubah isi file
     file_name = "data.txt"
     try:
-        # Menambahkan data baru ke file
-        with open(file_name, "a", encoding='utf-8') as file:
-            file.write(f"{pertanyaan}:{jawaban}\n")
-        print("Data disimpan!")
-
-        # Membaca, merapikan, dan mengurutkan file
+        # Membaca file dan memeriksa duplikat
         with open(file_name, "r", encoding='utf-8') as file:
             lines = file.readlines()
 
         # Membersihkan dan merapikan setiap baris
         cleaned_lines = []
+        pertanyaan_set = set()
         for line in lines:
             stripped_line = line.strip()
             if stripped_line:
-                cleaned_lines.append(stripped_line)
+                q, _ = stripped_line.split(":", 1)
+                if q not in pertanyaan_set:
+                    pertanyaan_set.add(q)
+                    cleaned_lines.append(stripped_line)
+
+        # Menambahkan data baru jika belum ada
+        if pertanyaan not in pertanyaan_set:
+            cleaned_lines.append(f"{pertanyaan}:{jawaban}")
 
         # Mengurutkan baris berdasarkan abjad
         sorted_lines = sorted(cleaned_lines)
@@ -134,7 +136,7 @@ def edit_data_file(pertanyaan, jawaban):
             for line in sorted_lines:
                 file.write(line + "\n")
 
-        print("File telah dirapikan dan diurutkan berdasarkan abjad.")
+        print("Data disimpan dan file telah dirapikan serta diurutkan berdasarkan abjad.")
     except FileNotFoundError:
         print(f"File {file_name} tidak ditemukan.")
     except PermissionError:
