@@ -119,14 +119,19 @@ def edit_data_file(pertanyaan, jawaban):
         for line in lines:
             stripped_line = line.strip()
             if stripped_line:
-                q, _ = stripped_line.split(":", 1)
-                if q not in pertanyaan_set:
-                    pertanyaan_set.add(q)
-                    cleaned_lines.append(stripped_line)
+                try:
+                    q, _ = stripped_line.split(" : ", 1)
+                    if q not in pertanyaan_set:
+                        pertanyaan_set.add(q)
+                        cleaned_lines.append(stripped_line)
+                except ValueError:
+                    # Jika format baris tidak sesuai, abaikan baris tersebut
+                    print(f"Baris tidak valid: {stripped_line}")
+                    continue
 
         # Menambahkan data baru jika belum ada
         if pertanyaan not in pertanyaan_set:
-            cleaned_lines.append(f"{pertanyaan}:{jawaban}")
+            cleaned_lines.append(f"{pertanyaan} : {jawaban}")
 
         # Mengurutkan baris berdasarkan abjad
         sorted_lines = sorted(cleaned_lines)
@@ -138,11 +143,17 @@ def edit_data_file(pertanyaan, jawaban):
 
         print("Data disimpan dan file telah dirapikan serta diurutkan berdasarkan abjad.")
     except FileNotFoundError:
-        print(f"File {file_name} tidak ditemukan.")
+        # Jika file tidak ditemukan, buat file baru
+        with open(file_name, "w", encoding='utf-8') as file:
+            file.write(f"{pertanyaan} : {jawaban}\n")
+        print(f"File {file_name} tidak ditemukan. File baru telah dibuat.")
     except PermissionError:
         print(f"Anda tidak memiliki izin untuk menulis file {file_name}.")
     except Exception as e:
         print(f"Kesalahan: {e}")
+
+# Contoh penggunaan
+edit_data_file("Apa kabar?", "Kabar baik")
 
 konteks = {}  # Variabel global untuk menyimpan konteks
 
@@ -153,8 +164,8 @@ def cari_jawaban(pertanyaan):
             jawaban_list = []
             for line in file.readlines():
                 line = line.strip().lower()
-                if ":" in line:
-                    p, j = line.split(":")
+                if " : " in line:
+                    p, j = line.split(" : ")
                     if p in pertanyaan.lower():
                         jawaban_list = [x.strip() for x in j.split(" | ")]
             if jawaban_list:
@@ -219,3 +230,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+    
