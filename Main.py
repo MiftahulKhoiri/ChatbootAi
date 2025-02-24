@@ -106,54 +106,81 @@ def hitung_data():
     except Exception as e:
         print(f"Kesalahan: {e}")
 
-def edit_data_file(pertanyaan, jawaban):
-    file_name = "data.txt"
+def read_and_clean_file(file_name):
+    """
+    Membaca file dan membersihkan data yang ada.
+    Mengembalikan set pertanyaan yang sudah ada dan daftar baris yang sudah dibersihkan.
+    """
+    pertanyaan_set = set()
+    cleaned_lines = []
+
     try:
-        # Membaca file dan memeriksa duplikat
         with open(file_name, "r", encoding='utf-8') as file:
-            lines = file.readlines()
-
-        # Membersihkan dan merapikan setiap baris
-        cleaned_lines = []
-        pertanyaan_set = set()
-        for line in lines:
-            stripped_line = line.strip()
-            if stripped_line:
-                try:
-                    q, _ = stripped_line.split(" : ", 1)
-                    if q not in pertanyaan_set:
-                        pertanyaan_set.add(q)
-                        cleaned_lines.append(stripped_line)
-                except ValueError:
-                    # Jika format baris tidak sesuai, abaikan baris tersebut
-                    print(f"Baris tidak valid: {stripped_line}")
-                    continue
-
-        # Menambahkan data baru jika belum ada
-        if pertanyaan not in pertanyaan_set:
-            cleaned_lines.append(f"{pertanyaan} : {jawaban}")
-
-        # Mengurutkan baris berdasarkan abjad
-        sorted_lines = sorted(cleaned_lines)
-
-        # Menulis kembali ke file yang sama
-        with open(file_name, "w", encoding='utf-8') as file:
-            for line in sorted_lines:
-                file.write(line + "\n")
-
-        print("Data disimpan dan file telah dirapikan serta diurutkan berdasarkan abjad.")
+            for line in file:
+                stripped_line = line.strip()
+                if stripped_line:
+                    try:
+                        q, _ = stripped_line.split(" : ", 1)
+                        if q not in pertanyaan_set:
+                            pertanyaan_set.add(q)
+                            cleaned_lines.append(stripped_line)
+                    except ValueError:
+                        print(f"Baris tidak valid: {stripped_line}")
+                        continue
     except FileNotFoundError:
-        # Jika file tidak ditemukan, buat file baru
+        print(f"File {file_name} tidak ditemukan. File baru akan dibuat.")
+    except Exception as e:
+        print(f"Kesalahan saat membaca file: {e}")
+
+    return pertanyaan_set, cleaned_lines
+
+def write_sorted_data(file_name, lines):
+    """
+    Menulis data yang sudah diurutkan ke file.
+    """
+    try:
         with open(file_name, "w", encoding='utf-8') as file:
-            file.write(f"{pertanyaan} : {jawaban}\n")
-        print(f"File {file_name} tidak ditemukan. File baru telah dibuat.")
+            for line in sorted(lines):
+                file.write(line + "\n")
+        print("Data disimpan dan file telah dirapikan serta diurutkan berdasarkan abjad.")
     except PermissionError:
         print(f"Anda tidak memiliki izin untuk menulis file {file_name}.")
     except Exception as e:
-        print(f"Kesalahan: {e}")
+        print(f"Kesalahan saat menulis file: {e}")
 
-# Contoh penggunaan
-edit_data_file("Apa kabar?", "Kabar baik")
+def validate_input(pertanyaan, jawaban):
+    """
+    Memvalidasi input pertanyaan dan jawaban.
+    Mengembalikan True jika valid, False jika tidak.
+    """
+    if not pertanyaan or not jawaban:
+        print("Pertanyaan dan jawaban tidak boleh kosong.")
+        return False
+    if ":" in pertanyaan or "\n" in pertanyaan or ":" in jawaban or "\n" in jawaban:
+        print("Pertanyaan dan jawaban tidak boleh mengandung karakter ':' atau newline.")
+        return False
+    return True
+
+def edit_data_file(pertanyaan, jawaban):
+    """
+    Menambahkan pertanyaan dan jawaban baru ke file data.txt.
+    Membersihkan dan mengurutkan file berdasarkan abjad.
+    """
+    file_name = "data.txt"
+
+    # Validasi input
+    if not validate_input(pertanyaan, jawaban):
+        return
+
+    # Membaca dan membersihkan file
+    pertanyaan_set, cleaned_lines = read_and_clean_file(file_name)
+
+    # Menambahkan data baru jika belum ada
+    if pertanyaan not in pertanyaan_set:
+        cleaned_lines.append(f"{pertanyaan} : {jawaban}")
+
+    # Menulis data yang sudah diurutkan ke file
+    write_sorted_data(file_name, cleaned_lines)
 
 konteks = {}  # Variabel global untuk menyimpan konteks
 
@@ -174,7 +201,8 @@ def cari_jawaban(pertanyaan):
                 # Cek apakah ada konteks sebelumnya
                 if "terakhir" in pertanyaan.lower() and "terakhir" in konteks:
                     return konteks["terakhir"]
-                print(f"chatboot: Maaf, {data_nama}, saya tidak tahu jawaban untuk pertanyaan tersebut. Tolong ajari saya!")
+                print(f"chatboot: Wah, {data_nama}, sepertinya saya belum tahu jawabannya. Bisa kamu bantu saya dengan memberi tahu jawabannya?")
+                
                 while True:
                     jawaban_baru = input("jawaban: ")
                     if jawaban_baru.strip() != "":
