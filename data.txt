@@ -1,0 +1,245 @@
+Apa kabar? : Kabar baik | Baik-baik saja | Alhamdulillah sehat
+apa : apa tuan saya tidak faham | apa ada yang bisa sya bantu | apa yang bisa saya lakukan untukmu?
+apa kabar : kabar baik | baik-baik saja | alhamdulillah sehat
+asin : asin sekali | hem terlalu asin | apakah ke banyakan garam nya?
+bagai mana kabar hari ini : alhamdulillah kabar hari ini baik | baik-baik saja | lumayan, bagaimana denganmu?
+bagaimana : bagaimana caranya | bagaimana bisa itu terjadi | bagaimana menurutmu?
+baik : baik sekali | baik-baik saja | tidak ada masalah
+bangun : selamat bangun | sudah bangun kah ? | bangun tidur yuk
+basah : basah sekali | kehujanan | terkena air
+belajar : selamat belajar | kamu sedang belajar apa | belajar apa hari ini?
+berbelanja : berbelanja di pasar | belanja kebutuhan bulanan | belanja online
+berbicara : berbicara dengan teman | ngobrol santai | diskusi seru
+berenang : berenang di kolam | berenang di laut | berenang bersama teman
+berjalan : berjalan santai | jalan-jalan di taman | jalan pagi
+berkebun : berkebun di halaman | menanam sayuran | merawat tanaman
+berlari : berlari cepat | lari pagi | lari marathon
+bersih : bersih sekali | rapi dan bersih | baru saja dibersihkan
+besar : besar sekali | sangat besar | ukurannya besar
+besok : besok sore | besok siang | besok pagi
+besok lusa : besok lusa sore | besok lusa pagi | besok lusa malam
+besok pagi : besok pagi cerah | besok pagi hujan | besok pagi mendung
+buku : buku baru | buku bagus | buku favorit
+buku tulis : buku tulis baru | buku tulis bagus | buku tulis favorit
+buruk : buruk sekali | tidak baik | kurang memuaskan
+celana : celana jeans | celana pendek | celana panjang
+cepat : cepat sekali | sangat cepat | tidak lama
+cepat-cepat : cepat-cepat selesai | cepat-cepat datang | cepat-cepat bereskan
+cerah : cerah sekali | sangat cerah | cuaca cerah
+cinta : aku cinta kamu | cinta itu indah | cinta sejati
+datang : selamat datang | datang tepat waktu | datang dengan senyuman
+di mana : di mana saja | di mana kamu? | di mana lokasinya?
+di sana : di sana saja | di sana tempatnya | di sana lokasinya
+di sini : di sini saja | di sini tempatnya | di sini lokasinya
+dingin : dingin sekali | sangat dingin | cuaca dingin
+dompet : dompet kulit | dompet baru | dompet kesayangan
+exit : terima kasih telah menyapa saya semoga hari mu menyenag kan | terimakasih telah ber kunjung | sampai jumpa lagi
+galak : galak sekali | sangat galak | tidak ramah
+gelap : gelap sekali | sangat gelap | tidak ada cahaya
+hai : hai juga | hai juga ada yang bisa saya bantu ? | hai, apa kabar?
+hem : iya iya | hem, begitu | hem, oke
+info : info apa tuan | info terbaru | info penting
+ini : mana? | di mana
+jaket : jaket hangat | jaket baru | jaket kesayangan
+jalan : selamat jalan | hati-hati di jalan | sampai tujuan
+jam : jam dinding | jam tangan | jam weker
+kacamata : kacamata hitam | kacamata baca | kacamata gaya
+kantor : kantor baru | kantor besar | kantor modern
+kaos : kaos oblong | kaos baru | kaos favorit
+kapan : kapan saja | kapan kamu bisa? | kapan waktunya?
+kecil : kecil sekali | sangat kecil | ukurannya kecil
+keluarga : keluarga bahagia | keluarga harmonis | keluarga besar
+kemarin : kemarin pagi | kemarin siang | kemarin malam
+kemarin lusa : kemarin lusa pagi | kemarin lusa siang | kemarin lusa malam
+keras : keras sekali | sangat keras | suaranya keras
+kering : kering sekali | sangat kering | tidak basah
+kerja : selamat bekerja | kerja keras | kerja cerdas
+komputer : komputer cepat | komputer baru | komputer canggih
+komputer laptop : komputer laptop ringan | laptop baru | laptop canggih
+kotor : kotor sekali | sangat kotor | perlu dibersihkan
+kuat : kuat sekali | sangat kuat | tidak mudah rusak
+kunci : kunci rumah | kunci mobil | kunci pintu
+kursi : kursi nyaman | kursi baru | kursi ergonomis
+kursi kantor : kursi kantor nyaman | kursi kantor baru | kursi kantor ergonomis
+lagi ngapain : lagi santai aja | lagi istirahat | lagi ngerjain tugas
+lalu : bagai mana | lalu bagaimana? | lalu apa?
+lambat : lambat sekali | sangat lambat | tidak cepat
+lampu : lampu terang | lampu baru | lampu hemat energi
+lampu belajar : lampu belajar LED | lampu belajar baru | lampu belajar hemat energi
+lanjut : lanjut kemana tuan | lanjut aja | lanjut ceritanya
+lemah : lemah sekali | sangat lemah | tidak kuat
+lembut : lembut sekali | sangat lembut | teksturnya lembut
+liburan : selamat liburan | liburan seru | liburan menyenangkan
+lusa : lusa malam | lusa pagi | lusa siang
+maaf : tidak apa-apa | maafkan saya | maaf ya
+mahal : mahal sekali | sangat mahal | harganya mahal
+makan : selamat makan | makan enak | makan bersama
+malam : selamat malam | malam yang tenang | malam indah
+manis : manis sekali | apakh kamu suka rasa manis | sangat manis
+meja : meja kayu | di mana ada meja ? | meja baru
+meja kerja : meja kerja ergonomis | meja kerja baru | meja kerja nyaman
+melihat : melihat pemandangan | melihat film | melihat teman
+melukis : melukis kanvas | sedang melukis apa ? | melukis pemandangan
+memahat : memahat patung | apakah kamu bisa memahat ? | memahat kayu
+memasak : memasak makanan lezat | memasak bersama | memasak untuk keluarga
+membaca : membaca buku | membaca novel | membaca koran
+membeli : membeli makanan | membeli kebutuhan | membeli online
+membersihkan : membersihkan rumah | membersihkan kamar | membersihkan halaman
+memotong : memotong rumput | memotong kue | memotong kayu
+menari : menari dengan riang | menari bersama | menari di pesta
+mencuci : mencuci pakaian | mencuci mobil | mencuci piring
+mendengar : mendengar musik | mendengar cerita | mendengar berita
+mengajar : mengajar siswa | mengajar di sekolah | mengajar dengan sabar
+mengapa : mengapa begitu | mengapa kamu bertanya? | mengapa terjadi?
+mengedit : mengedit video | mengedit foto | mengedit dokumen
+mengepel : mengepel lantai | mengepel rumah | mengepel kamar
+mengetik : mengetik dokumen | mengetik laporan | mengetik surat
+menggambar : menggambar pemandangan | menggambar wajah | menggambar abstrak
+menjahit : menjahit baju | menjahit kain | menjahit untuk keluarga
+menjual : menjual barang | menjual makanan | menjual online
+menulis : menulis surat | menulis cerita | menulis buku
+menyanyi : menyanyi dengan merdu | menyanyi di pesta | menyanyi bersama
+menyapu : menyapu lantai | menyapu halaman | menyapu rumah
+menyetir : menyetir mobil | menyetir dengan hati-hati | menyetir ke kantor
+menyetrika : menyetrika baju | menyetrika pakaian | menyetrika seragam
+minum : selamat minum | minum air | minum jus
+mobil : mobil merah | mobil baru | mobil cepat
+mobil listrik : mobil listrik ramah lingkungan | mobil listrik baru | mobil listrik canggih
+motor : motor hitam | motor baru | motor keren
+motor sport : motor sport kencang | motor sport baru | motor sport keren
+murah : murah sekali | sangat murah | harganya murah
+nama : nama saya bootAi | nama saya asisten virtual | nama saya AI
+nanti : nanti saja | nanti sore | nanti malam
+nanti malam : nanti malam tenang | nanti malam cerah | nanti malam dingin
+ngak tau : trus mau nya apa | saya tidak tahu | maaf, saya tidak mengerti
+oh gitu : iya | oh begitu | oke
+oh sama : ada apa | oh, sama | ada yang bisa saya bantu?
+ok : ok juga | oke | baiklah
+pagi : selamat pagi | pagi yang cerah | pagi yang indah
+pahit : pahit sekali | sangat pahit | rasanya pahit
+panas : panas sekali | sangat panas | cuaca panas
+panjang : panjang sekali | sangat panjang | ukurannya panjang
+pedas : pedas sekali | sangat pedas | rasanya pedas
+pendek : pendek sekali | sangat pendek | ukurannya pendek
+pensil : pensil warna | pensil baru | pensil favorit
+pensil mekanik : pensil mekanik warna | pensil mekanik baru | pensil mekanik favorit
+pergi : selamat tinggal | pergi dengan hati-hati | sampai jumpa lagi
+perlahan : perlahan-lahan | dengan perlahan | tidak terburu-buru
+perlahan-lahan : perlahan-lahan saja | dengan santai | tidak perlu terburu-buru
+ramah : ramah sekali | sangat ramah | sikapnya ramah
+rendah : rendah sekali | sangat rendah | posisinya rendah
+rumah : rumah saya | rumah baru | rumah nyaman
+sampai jumpa : sampai jumpa lagi | sampai ketemu lagi | sampai bertemu lagi
+saya bangun pagi : saya bangun pagi jam 6 | saya bangun pagi jam 7 | saya bangun pagi jam 8
+saya bangun tidur : saya bangun tidur jam 7 pagi | saya bangun tidur jam 8 pagi | saya bangun tidur jam 9 pagi
+saya bebas : saya sangat bebas | saya punya waktu luang | saya tidak sibuk
+saya bekerja : saya bekerja di kantor | saya bekerja di rumah | saya bekerja freelance
+saya bekerja di kantor : saya bekerja di kantor setiap hari | saya bekerja di kantor dari pagi sampai sore | saya bekerja di kantor dengan senang hati
+saya bekerja di rumah : saya bekerja di rumah setiap hari | saya bekerja di rumah dengan nyaman | saya bekerja di rumah sambil menjaga keluarga
+saya belajar : saya belajar di rumah | saya belajar di perpustakaan | saya belajar online
+saya belajar di kamar : saya belajar di kamar setiap malam | saya belajar di kamar dengan tenang | saya belajar di kamar sambil mendengarkan musik
+saya belajar di perpustakaan : saya belajar di perpustakaan setiap sore | saya belajar di perpustakaan dengan fokus | saya belajar di perpustakaan sambil membaca buku
+saya berlibur : saya berlibur ke pantai | saya berlibur ke gunung | saya berlibur ke luar negeri
+saya berlibur ke gunung : saya berlibur ke gunung setiap tahun | saya berlibur ke gunung dengan teman | saya berlibur ke gunung untuk bersantai
+saya berlibur ke pantai : saya berlibur ke pantai setiap tahun | saya berlibur ke pantai dengan keluarga | saya berlibur ke pantai untuk menikmati matahari terbenam
+saya bermain : saya bermain dengan teman | saya bermain game | saya bermain bola
+saya bermain bola : saya bermain bola dengan teman | saya bermain bola di lapangan | saya bermain bola setiap akhir pekan
+saya bermain game : saya bermain game dengan teman | saya bermain game online | saya bermain game favorit
+saya bingung : saya sangat bingung | saya tidak tahu harus bagaimana | saya butuh bantuan
+saya butuh bantuan : saya butuh bantuan Anda | saya butuh bantuan untuk menyelesaikan ini | saya butuh bantuan segera
+saya butuh waktu : saya butuh waktu untuk berpikir | saya butuh waktu untuk memutuskan | saya butuh waktu untuk menyelesaikan ini
+saya haus : saya ingin minum | saya haus sekali | saya butuh air
+saya lapar : saya ingin makan | saya lapar sekali | saya butuh makanan
+saya lelah : saya ingin tidur | saya lelah sekali | saya butuh istirahat
+saya makan malam : saya makan malam di rumah | saya makan malam dengan keluarga | saya makan malam di restoran
+saya makan siang : saya makan siang di restoran | saya makan siang dengan teman | saya makan siang di kantor
+saya marah : saya sangat marah | saya tidak suka ini | saya kesal
+saya mau makan : saya mau makan nasi goreng | saya mau makan mie | saya mau makan buah
+saya mau makan nasi : saya mau makan nasi goreng | saya mau makan nasi uduk | saya mau makan nasi kuning
+saya mau pergi : saya mau pergi sekarang | saya mau pergi ke pasar | saya mau pergi ke kantor
+saya mau pergi sekarang : saya mau pergi sekarang juga | saya mau pergi secepatnya | saya mau pergi dengan segera
+saya mau tinggal : saya mau tinggal di sini | saya mau tinggal di rumah | saya mau tinggal di kota ini
+saya mau tinggal di sini : saya mau tinggal di sini saja | saya mau tinggal di sini selamanya | saya mau tinggal di sini dengan nyaman
+saya minum jus : saya minum jus setiap pagi | saya minum jus jeruk | saya minum jus apel
+saya minum kopi : saya minum kopi setiap pagi | saya minum kopi hitam | saya minum kopi dengan gula
+saya minum teh : saya minum teh setiap sore | saya minum teh hangat | saya minum teh dengan lemon
+saya pergi ke pasar : saya pergi ke pasar setiap pagi | saya pergi ke pasar untuk belanja | saya pergi ke pasar dengan teman
+saya pergi ke sekolah : saya pergi ke sekolah setiap pagi | saya pergi ke sekolah dengan teman | saya pergi ke sekolah naik sepeda
+saya pergi ke taman : saya pergi ke taman setiap sore | saya pergi ke taman untuk bersantai | saya pergi ke taman dengan keluarga
+saya pulang dari kantor : saya pulang dari kantor setiap sore | saya pulang dari kantor dengan lelah | saya pulang dari kantor naik mobil
+saya pulang dari sekolah : saya pulang dari sekolah setiap siang | saya pulang dari sekolah dengan teman | saya pulang dari sekolah naik bus
+saya punya janji : saya punya janji dengan teman | saya punya janji di kantor | saya punya janji penting
+saya punya rencana : saya punya rencana untuk liburan | saya punya rencana untuk bekerja | saya punya rencana untuk belajar
+saya sedih : saya sangat sedih | saya merasa kecewa | saya butuh dukungan
+saya senang : saya sangat senang | saya merasa bahagia | saya senang bertemu denganmu
+saya senang bertemu denganmu : saya senang bertemu denganmu hari ini | saya senang bertemu denganmu lagi | saya senang bertemu denganmu di sini
+saya senang membantu : saya senang membantu Anda | saya senang bisa membantu | saya senang membantu teman
+saya setuju : saya setuju dengan pendapatmu | saya setuju dengan keputusan ini | saya setuju dengan usulanmu
+saya setuju denganmu : saya setuju dengan pendapatmu | saya setuju dengan ide kamu | saya setuju dengan saranmu
+saya sibuk : saya sangat sibuk | saya punya banyak pekerjaan | saya tidak punya waktu luang
+saya takut : saya sangat takut | saya merasa tidak aman | saya butuh perlindungan
+saya tidak bisa datang : saya tidak bisa datang ke acara itu | saya tidak bisa datang karena sibuk | saya tidak bisa datang hari ini
+saya tidak bisa membantu : saya tidak bisa membantu kali ini | saya tidak bisa membantu karena sibuk | saya tidak bisa membantu saat ini
+saya tidak punya waktu : saya tidak punya waktu luang | saya tidak punya waktu untuk ini | saya tidak punya waktu sekarang
+saya tidak setuju : saya tidak setuju dengan pendapatmu | saya tidak setuju dengan keputusan ini | saya tidak setuju dengan usulanmu
+saya tidak setuju denganmu : saya tidak setuju dengan pendapatmu | saya tidak setuju dengan ide kamu | saya tidak setuju dengan saranmu
+saya tidak tahu : saya tidak tahu jawabannya | saya tidak tahu harus bagaimana | saya tidak tahu informasi itu
+saya tidur malam : saya tidur malam jam 10 | saya tidur malam jam 11 | saya tidur malam jam 12
+saya tidur siang : saya tidur siang setelah makan | saya tidur siang selama satu jam | saya tidur siang untuk istirahat
+sebentar : sebentar lagi | tunggu sebentar | sebentar saja
+sebentar lagi : sebentar lagi selesai | sebentar lagi datang | sebentar lagi beres
+segera : segera datang | segera selesai | segera beres
+segera mungkin : segera mungkin datang | segera mungkin selesai | segera mungkin beres
+sekarang : sekarang juga | sekarang saatnya | sekarang waktunya
+sekarang juga : sekarang juga lakukan | sekarang juga selesai | sekarang juga beres
+sekolah : sekolah favorit | sekolah baru | sekolah terbaik
+selamat : selamat atas [achievement] | selamat ya | selamat untukmu
+selamat atas kelulusan : semoga sukses di masa depan | selamat ya | selamat untukmu
+selamat atas promosi : semoga sukses di posisi baru | selamat ya | selamat untukmu
+selamat bangun : selamat bangun, semoga segar | selamat pagi | selamat hari baru
+selamat bekerja : selamat bekerja, semoga sukses | semoga harimu menyenangkan | semoga pekerjaanmu lancar
+selamat belajar : selamat belajar, semoga paham | semoga belajarmu lancar | semoga sukses
+selamat berakhir pekan : semoga akhir pekan Anda menyenangkan | selamat berlibur | selamat bersantai
+selamat berlibur : semoga liburan Anda menyenangkan | selamat bersantai | selamat menikmati waktu
+selamat datang : selamat datang di rumah kami | selamat datang di sini | selamat datang di tempat kami
+selamat istirahat : selamat istirahat, semoga nyenyak | selamat tidur | selamat bersantai
+selamat jalan : selamat jalan, hati-hati di jalan | sampai jumpa lagi | semoga sampai dengan selamat
+selamat makan : selamat makan, semoga enak | selamat menikmati | semoga makanannya lezat
+selamat malam : semoga malam Anda nyaman | selamat tidur | selamat beristirahat
+selamat menikah : semoga bahagia selamanya | selamat untuk kalian | semoga langgeng
+selamat minum : selamat minum, semoga segar | selamat menikmati | semoga minumannya enak
+selamat pagi : semoga hari Anda menyenangkan | selamat pagi | selamat memulai hari
+selamat siang : semoga siang Anda cerah | selamat siang | selamat beraktivitas
+selamat sore : semoga sore Anda tenang | selamat sore | selamat bersantai
+selamat tidur : selamat tidur, semoga mimpi indah | selamat beristirahat | semoga tidur nyenyak
+selamat tinggal : selamat tinggal, sampai jumpa lagi | sampai ketemu lagi | semoga kita bertemu lagi
+selamat ulang tahun : semoga panjang umur dan bahagia | selamat ulang tahun | selamat merayakan
+sepatu : sepatu olahraga | sepatu baru | sepatu favorit
+sepeda : sepeda gunung | sepeda baru | sepeda keren
+sepeda listrik : sepeda listrik modern | sepeda listrik baru | sepeda listrik keren
+siang : selamat siang | siang yang cerah | siang yang panas
+siap : siap tuan | siap siap | siap melayani
+siapa nama kamu : nama saya bootAi | nama saya asisten virtual | nama saya AI
+sibuk kah : tidak tuan saya lagi santai aja
+sip : sip boz | sip | oke
+sore : selamat sore | sore yang tenang | sore yang cerah
+tadi : tadi siang | tadi pagi | tadi malam
+tadi malam : tadi malam tenang | tadi malam cerah | tadi malam dingin
+tajam : tajam sekali | sangat tajam | tidak tumpul
+tas : tas sekolah | tas baru | tas favorit
+telepon : telepon genggam | telepon baru | telepon canggih
+telepon pintar : telepon pintar canggih | telepon pintar baru | telepon pintar favorit
+televisi : televisi besar | televisi baru | televisi canggih
+televisi layar datar : televisi layar datar besar | televisi layar datar baru | televisi layar datar canggih
+teman : teman baik | teman baru | teman dekat
+terima kasih : terima kasih kembali | sama-sama | terima kasih banyak
+terus : ngak tau | terus bagaimana? | terus apa?
+tidak : tidak | tidak mungkin | tidak bisa
+tidur : selamat tidur | tidur nyenyak | tidur lelap
+tinggi : tinggi sekali | sangat tinggi | tidak pendek
+tolong : sama-sama | tolong ya | tolong bantu saya
+topi : topi baseball | topi baru | topi favorit
+tumpul : tumpul sekali | sangat tumpul | tidak tajam
+ulang tahun : selamat ulang tahun | selamat merayakan | semoga panjang umur
+waktu : apakah maksud anda waktu sekarang | waktu yang tepat | waktu yang tersedia
+ya : ya | iya | betul
